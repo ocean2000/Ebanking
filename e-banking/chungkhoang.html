@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/css/news-infomation.css">
     <link rel="stylesheet" href="./assets/css/admin.css">
     <link rel="stylesheet" href="./assets/css/admin-info.css">
+
+    <script src="./assets/js/chungkhoan.js"></script>
 </head>
 <body>
     <div id="main">
@@ -67,38 +69,40 @@
             <div class="row nhap">
               <div class="col l-4 colchu">Tài khoản nguồn</div>
               <div class= "col l-8 colnhap">
-                <select id="orient" name="orient">
-                    <option value="dong">Chuyển tiền ngay giá trị hiện tại</option>
-                    <option value="tay">Chuyển tiền ngày giá trị hiện tại</option>
-                    <option value="nam">Chuyển nhanh</option>
+                <select onchange="changeTknguon()" id="tknguon" name="orient">
+                  <option value="dong">3746 4123 6868 254</option>
+                  <option value="nam">0972686868</option>
                 </select>
               </div>
             </div>
             <div class="row nhap">
               <div class="col l-4 colchu">Nhà cung cấp</div>
               <div class= "col l-8 colnhap">
-                <select id="orient" name="orient">
-                    <option value="dong">Chuyển tiền ngay giá trị hiện tại</option>
-                    <option value="tay">Chuyển tiền ngày giá trị hiện tại</option>
-                    <option value="nam">Chuyển nhanh</option>
+                <select onchange="changeNCC()" id="nhacungcapck" name="orient">
+                    <option value="dong">Công ty chứng khoán SSI</option>
+                    <option value="tay">Công ty chứng khoán kỹ thương - TCBS</option>
+                    <option value="nam">Công ty chứng khoán VNDirect</option>
                 </select>
               </div>
               <div class="col l-4 colchu">Loại dịch vụ</div>
               <div class= "col l-8 colnhap">
-                <select id="orient" name="orient">
-                    <option value="dong">Chuyển tiền ngay giá trị hiện tại</option>
-                    <option value="tay">Chuyển tiền ngày giá trị hiện tại</option>
+                <select onchange="changeLoaidv()" id="loaidichvu" name="orient">
                     <option value="nam">Chuyển nhanh</option>
-                </select>              </div>
+                </select>             
+               </div>
               <div class="col l-4 colchu">Mã khách hàng</div>
               <div class= "col l-8 colnhap">
-                <input type="text" id="floor" name="Tang" placeholder="">
+                <input onchange="changeMakh()"type="text" id="makh" name="Tang" placeholder="Mã khách hàng">
+              </div>
+              <div class="col l-4 colchu">Số tiền nạp</div>
+              <div class= "col l-8 colnhap">
+                <input onchange="changeSotien()"type="text" id="sotien" name="Tang" placeholder="Số tiền">
               </div>
             </div>
             
             
             <div class="row"> 
-              <div class="ocef"><a href="./chungkhoanxn.html"><button  class="btnth">Thực hiện</button></a></div>
+              <div class="ocef"><a href="./chungkhoanxn.html"><button onclick="ClickHandler()"  class="btnth">Thực hiện</button></a></div>
             </div>
 
           

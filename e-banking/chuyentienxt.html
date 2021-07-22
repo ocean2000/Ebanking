@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/news-infomation.css">
     <link rel="stylesheet" href="./assets/css/admin.css">
     <link rel="stylesheet" href="./assets/css/admin-info.css">
+    <script src="./assets/js/chuyentienxt.js"></script>
 </head>
 <body>
     <div id="main">
@@ -67,8 +68,8 @@
 
             <div class="row nhap">
              
-              <div class= "col l-12 colnhap">
-                <input type="text" id="floor" name="Tang" placeholder="Nhập Smart OTP được nhận từ số điện thoại đăng ký">
+              <div id="divOTP" class= "col l-12 colnhap">
+                <input onchange="changeOTP()" type="text" id="OTP" name="Tang" placeholder="Nhập Smart OTP được nhận từ số điện thoại đăng ký">
               </div>
               
             </div>
@@ -77,38 +78,38 @@
             <div class="row nhap">
               <div class="col l-4 colchu">Hình thức chuyển</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="ht"></p>
               </div>
               <div class="col l-4 colchu">Tài khoản nguồn</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="tknguon"></p>
               </div>
             </div>
 
             <div class="row nhap">
               <div class="col l-4 colchu">Tài khoản đích</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="stk"></p>
               </div>
               <div class="col l-4 colchu">Tên người thụ hưởng</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="tennguoithuhuong">Lê Đại Dương </p>
               </div>
               <div class="col l-4 colchu">Số tiền</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="sotien"></p>
               </div>
               <div class="col l-4 colchu">Số tiền phí</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="sotienphi"></p>
               </div>
               <div class="col l-4 colchu">Phí giao dịch</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="phigd"></p>
               </div>
               <div class="col l-4 colchu">Nội dung</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="noidung"></p>
               </div>
             </div>
          
@@ -116,7 +117,8 @@
 
             <div class="row"> 
               <div class="col l-4 l-o-2 close"><a href="./chuyentienxn.html"><button class="btnth">Trở về</button></a></div>
-              <div class="col l-3 ok"><a href="./chuyentienkq.html"><button class="btnth">Xác nhận</button></a></div>
+              <div class="col l-3 ok"><a href="./chuyentienkq.html"><button onclick="ClickHandler()" class="btnth">Xác nhận</button></a></div>
+              
             </div>
 
           

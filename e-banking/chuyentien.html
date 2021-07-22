@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/css/news-infomation.css">
     <link rel="stylesheet" href="./assets/css/admin.css">
     <link rel="stylesheet" href="./assets/css/admin-info.css">
+    
+    <script src="./assets/js/chuyentien.js"></script>
 </head>
 <body>
     <div id="main">
@@ -67,9 +69,8 @@
             <div class="row nhap">
                   <div class="col l-4 colchu">Hình thức chuyển</div>
                   <div class= "col l-8 colnhap">
-                    <select id="orient" name="orient">
+                    <select id="hinhthuc" name="orient" onchange="changeOptionHinhthuc()">
                         <option value="dong">Chuyển tiền ngay giá trị hiện tại</option>
-                        <option value="tay">Chuyển tiền ngày giá trị hiện tại</option>
                         <option value="nam">Chuyển nhanh</option>
                     </select>
                   </div>
@@ -77,10 +78,9 @@
             <div class="row nhap">
               <div class="col l-4 colchu">Tài khoản nguồn</div>
               <div class= "col l-8 colnhap">
-                <select id="orient" name="orient">
-                    <option value="dong">Chuyển tiền ngay giá trị hiện tại</option>
-                    <option value="tay">Chuyển tiền ngày giá trị hiện tại</option>
-                    <option value="nam">Chuyển nhanh</option>
+                <select id="tknguon" name="orient" onchange="changeOptionTknguon()">
+                    <option value="dong">3746 4123 6868 254</option>
+                    <option value="nam">0972686868</option>
                 </select>
               </div>
               <div class="col l-4 colchu">Số dư khả dụng</div>
@@ -91,30 +91,30 @@
             <div class="row nhap">
               <div class="col l-4 colchu">Thông tin người thụ hưởng</div>
               <div class= "col l-8 colnhap">
-                <input type="text" id="floor" name="Tang" placeholder="">
+                <input type="text" id="stk" name="stk" placeholder="Số tài khoản người thụ hưởng" onchange="changeStk()" >
               </div>
             </div>
             <div class="row nhap">
               <div class="col l-4 colchu">Số tiền</div>
               <div class= "col l-8 colnhap">
-                <input type="text" id="floor" name="Tang" placeholder="">
+                <input type="text" id="sotien" name="Tang" placeholder="Số tiền" value="" onchange="changeSotien()">
               </div>
 
               <div class="col l-4 colchu">Phí giao dịch</div>
               <div class= "col l-8 colnhap">
                 <div class="row">
-                  <div class="marginleft20 "><input class="" name="gioitinh" type="radio" value="TQ" /> Người chuyển trả  </div>   
-                  <div class="marginleft20"><input class="" name="gioitinh" type="radio" value="TQ" /> Người nhận trả  </div>     
+                  <div class="marginleft20 "><input checked onchange="changePhigd()" id="nguoichuyentra" class="" name="gioitinh" type="radio" value="TQ" > Người chuyển trả  </div>   
+                  <div class="marginleft20"><input onchange="changePhigd()" id="nguoinhantra" class="" name="gioitinh" type="radio" value="TQ" > Người nhận trả  </div>     
                 </div>
               </div>
 
               <div class="col l-4 colchu">Nội dung</div>
               <div class= "col l-8 colnhap">
-                <input type="text" id="floor" name="Tang" placeholder="">
+                <input onchange="changeNoidung()" type="text" id="noidung" name="Tang" placeholder="Nội dung">
               </div>            
             </div>
             <div class="row"> 
-              <div class="ocef"><a href="./chuyentienxn.html"><button class="btnth">Thực hiện</button></a></div>
+              <div class="ocef"><a href="./chuyentienxn.html" ><button onclick="ClickHandler()" class="btnth">Thực hiện</button></a></div>
             </div>
 
           

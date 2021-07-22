@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/css/news-infomation.css">
     <link rel="stylesheet" href="./assets/css/admin.css">
     <link rel="stylesheet" href="./assets/css/admin-info.css">
+
+    <script src="./assets/js/chungkhoanxt.js"></script>
 </head>
 <body>
     <div id="main">
@@ -66,8 +68,8 @@
             </div>
             <div class="row nhap">
              
-                <div class= "col l-12 colnhap">
-                  <input type="text" id="floor" name="Tang" placeholder="Nhập Smart OTP được nhận từ số điện thoại đăng ký">
+                <div id="divOTP" class= "col l-12 colnhap">
+                  <input onchange="changeOTP()" id="OTP" type="text" id="floor" name="Tang" placeholder="Nhập Smart OTP được nhận từ số điện thoại đăng ký">
                 </div>
                 
               </div>
@@ -75,23 +77,27 @@
             <div class="row nhap">
               <div class="col l-4 colchu">Tài khoản nguồn</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="tknguon"></p>
               </div>
              
             </div>
             <div class="row nhap">
               <div class="col l-4 colchu">Nhà cung cấp</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="nhacungcapck"></p>
 
               </div>
               <div class="col l-4 colchu">Loại dịch vụ</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="loaidichvu"></p>
             </div>
               <div class="col l-4 colchu">Mã khách hàng</div>
               <div class= "col l-8 colnhap">
-                <P>012932738</P>
+                <p id="makh"></p>
+              </div>
+              <div class="col l-4 colchu">Số tiền nạp</div>
+              <div class= "col l-8 colnhap">
+                <p id="sotien"></p>
               </div>
             </div>
           
@@ -99,7 +105,7 @@
             
               <div class="row"> 
                 <div class="col l-4 l-o-2 close"><a href="./chungkhoanxn.html"><button class="btnth">Trở về</button></a></div>
-                <div class="col l-3 ok"><a href="./chungkhoankq.html"><button class="btnth">Xác nhận</button></a></div>
+                <div class="col l-3 ok"><a href="./chungkhoankq.html"><button onclick="ClickHandler()" class="btnth">Xác nhận</button></a></div>
               </div>
 
           
